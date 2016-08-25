@@ -9,7 +9,7 @@ class LastModifyStrategy implements VersionStrategyInterface
     protected $staticDir;
 
     /**
-     * @param string|null $staticDir
+     * @param string $staticDir
      */
     public function __construct($staticDir)
     {
