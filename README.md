@@ -1,7 +1,7 @@
 # symfony-asset-strategy-last-modify
 Strategy for symfony assets component
 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/590c6fdc-95ed-4ed6-b76d-169d99c5de58/big.png)](https://insight.sensiolabs.com/projects/590c6fdc-95ed-4ed6-b76d-169d99c5de58)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/0251b6c1-4d02-4510-a6b7-bb2338ccfca1/big.png)](https://insight.sensiolabs.com/projects/0251b6c1-4d02-4510-a6b7-bb2338ccfca1)
 
 [![Build Status](https://travis-ci.org/alexpts/symfony-asset-strategy-last-modify.svg?branch=master)](https://travis-ci.org/alexpts/symfony-asset-strategy-last-modify)
 [![Test Coverage](https://codeclimate.com/github/alexpts/symfony-asset-strategy-last-modify/badges/coverage.svg)](https://codeclimate.com/github/alexpts/symfony-asset-strategy-last-modify/coverage)
