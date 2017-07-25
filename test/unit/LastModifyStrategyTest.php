@@ -53,4 +53,14 @@ class LastModifyStrategyTest extends TestCase
         $expected = '/unit/LastModifyStrategyTest.php?v=' . filemtime($baseDir . '/LastModifyStrategyTest.php');
         self::assertEquals($expected, $url);
     }
+
+    public function testVersionWithCDN()
+    {
+        $baseDir = __DIR__;
+        $package = new Package(new LastModifyStrategy($baseDir, 'cdn.st'));
+
+        $url = $package->getUrl('LastModifyStrategyTest.php');
+        $expected = '//cdn.st/LastModifyStrategyTest.php?v=' . filemtime($baseDir . '/LastModifyStrategyTest.php');
+        self::assertEquals($expected, $url);
+    }
 }

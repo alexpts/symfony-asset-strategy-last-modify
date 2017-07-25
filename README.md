@@ -21,3 +21,9 @@ Strategy for symfony assets component
 $package = new Package(new LastModifyStrategy($assertDirPath));
 $url = $package->getUrl('/jquery.js'); // /jquery.js?v=1472155706
 ```
+
+With CDN
+```php
+$package = new Package(new LastModifyStrategy($assertDirPath, 'cdn.host.org'));
+$url = $package->getUrl('/jquery.js'); // //cdn.host.org/jquery.js?v=1472155706
+```

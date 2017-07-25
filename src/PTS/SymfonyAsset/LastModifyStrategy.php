@@ -7,13 +7,17 @@ class LastModifyStrategy implements VersionStrategyInterface
 {
     /** @var string */
     protected $staticDir;
+    /** @var null|string */
+    protected $cdnHost;
 
     /**
      * @param string $staticDir
+     * @param string|null $cdnHost
      */
-    public function __construct($staticDir)
+    public function __construct($staticDir, $cdnHost = null)
     {
         $this->staticDir = $staticDir;
+        $this->cdnHost = $cdnHost;
     }
 
     /**
@@ -28,9 +32,19 @@ class LastModifyStrategy implements VersionStrategyInterface
     /**
      * @inheritdoc
      */
-    public function applyVersion($path)
+    public function applyVersion($relPath)
     {
-        $version = $this->getVersion($path);
-        return $version ? sprintf('%s?v=%s', $path, $version) : $path;
+        $version = $this->getVersion($relPath);
+        $path = $version ? sprintf('%s?v=%s', $relPath, $version) : $relPath;
+
+        if ($this->cdnHost) {
+            if (mb_substr($path, 0, 1, "UTF-8") !== '/') {
+                $path = '/' . $path;
+            }
+
+            $path = '//' . $this->cdnHost . $path;
+        }
+
+        return $path;
     }
 }
