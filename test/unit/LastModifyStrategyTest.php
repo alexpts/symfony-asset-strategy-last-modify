@@ -1,13 +1,12 @@
 <?php
 namespace PTS\SymfonyAsset;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Asset\Package;
 use Symfony\Component\Asset\PathPackage;
 
-class LastModifyStrategyTest extends PHPUnit_Framework_TestCase
+class LastModifyStrategyTest extends TestCase
 {
-
     public function testPackage()
     {
         $baseDir = __DIR__;
@@ -54,6 +53,4 @@ class LastModifyStrategyTest extends PHPUnit_Framework_TestCase
         $expected = '/unit/LastModifyStrategyTest.php?v=' . filemtime($baseDir . '/LastModifyStrategyTest.php');
         self::assertEquals($expected, $url);
     }
-
-
 }
