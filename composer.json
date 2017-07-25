@@ -9,10 +9,11 @@
         "version"
     ],
     "authors": [{
-        "name": "Alexpts",
+        "name": "Alex",
         "email": "alexpts@yandex.ru"
     }],
     "require": {
+        "php": "^7.1",
         "symfony/asset": "^3.3"
     },
     "require-dev": {

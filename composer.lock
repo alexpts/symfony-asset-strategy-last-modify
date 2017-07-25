@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4edb3faf6fff5039f5c157397c39c404",
+    "content-hash": "20c6875bee04f262a658d6a2b1c3ed3a",
     "packages": [
         {
             "name": "symfony/asset",
@@ -2349,6 +2349,8 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.1"
+    },
     "platform-dev": []
 }
