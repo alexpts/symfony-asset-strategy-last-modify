@@ -14,7 +14,7 @@ class LastModifyStrategy implements VersionStrategyInterface
      * @param string $staticDir
      * @param string|null $cdnHost
      */
-    public function __construct(string $staticDir, string $cdnHost = null)
+    public function __construct($staticDir, $cdnHost = null)
     {
         $this->staticDir = $staticDir;
         $this->cdnHost = $cdnHost;
@@ -23,7 +23,7 @@ class LastModifyStrategy implements VersionStrategyInterface
     /**
      * @inheritdoc
      */
-    public function getVersion($path): string
+    public function getVersion($path)
     {
         $path = $this->staticDir . '/' . $path;
         return file_exists($path) ? (string)filemtime($path) : '';
@@ -32,7 +32,7 @@ class LastModifyStrategy implements VersionStrategyInterface
     /**
      * @inheritdoc
      */
-    public function applyVersion($relPath): string
+    public function applyVersion($relPath)
     {
         $version = $this->getVersion($relPath);
         $path = $version ? sprintf('%s?v=%s', $relPath, $version) : $relPath;
