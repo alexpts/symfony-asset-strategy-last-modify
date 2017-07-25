@@ -1,11 +1,11 @@
 <?php
 namespace PTS\SymfonyAsset;
 
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 use Symfony\Component\Asset\Package;
 use Symfony\Component\Asset\PathPackage;
 
-class LastModifyStrategyTest extends TestCase
+class LastModifyStrategyTest extends PHPUnit_Framework_TestCase
 {
     public function testPackage()
     {
