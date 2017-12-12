@@ -9,7 +9,7 @@ Strategy for symfony assets component
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/alexpts/symfony-asset-strategy-last-modify/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/alexpts/symfony-asset-strategy-last-modify/?branch=master)
 
 
-Стратегия для получения версии ресурса из времени последнего изменения файла
+Strategy for symfony assets component for get version from last modify file time.
 
 ## Installation
 
